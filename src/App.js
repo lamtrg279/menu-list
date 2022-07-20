@@ -1,9 +1,9 @@
 import "./App.css";
 import React, { useState } from "react";
-import Menu from "./menu";
-import Categories from "./categories";
+import Menu from "./Menu";
+import Categories from "./Categories";
 import items from "./data";
-import logo from "./logo.png";
+import logo from "./logo.jpg";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
@@ -27,7 +27,7 @@ function App() {
       <section className='menu section'>
         <div className='title'>
           <img src={logo} alt='logo' className='logo' />
-          <h2>Menu List</h2>
+          <h2>Our Menu</h2>
           <div className='underline'></div>
         </div>
         <Categories
@@ -35,6 +35,7 @@ function App() {
           activeCategory={activeCategory}
           filterItems={filterItems}
         />
+        <Menu items={menuItems} />
       </section>
     </main>
   );

@@ -8,7 +8,7 @@ const Categories = ({ categories, activeCategory, filterItems }) => {
           <button
             type='button'
             className={`${
-              activeCategory === category ? "filter btn active" : "filter-btn"
+              activeCategory === category ? "filter-btn active" : "filter-btn"
             }`}
             key={index}
             onClick={() => filterItems(category)}
